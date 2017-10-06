@@ -360,7 +360,7 @@ open class RAReorderableLayout: UICollectionViewFlowLayout, UIGestureRecognizerD
         longPress = UILongPressGestureRecognizer(target: self, action: #selector(RAReorderableLayout.handleLongPress(_:)))
         panGesture = UIPanGestureRecognizer(target: self, action: #selector(RAReorderableLayout.handlePanGesture(_:)))
         longPress?.delegate = self
-        longPress?.minimumPressDuration = longPressDuration ?? 0.001
+        longPress?.minimumPressDuration = longPressDuration ?? 0.25
         panGesture?.delegate = self
         panGesture?.maximumNumberOfTouches = 1
         let gestures: NSArray! = collectionView.gestureRecognizers as NSArray!
